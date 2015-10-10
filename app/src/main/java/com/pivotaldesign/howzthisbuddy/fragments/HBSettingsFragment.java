@@ -47,7 +47,7 @@ public class HBSettingsFragment extends Fragment{
                 if (position == 0) {
                     FragmentManager fragmentManager2 = getFragmentManager();
                     FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
-                    HBProfileFragment fragment2 = new HBProfileFragment();
+                    HBNotificationFragment fragment2 = new HBNotificationFragment();
                     fragmentTransaction2.replace(R.id.frame_container, fragment2);
                     fragmentTransaction2.addToBackStack(null);
                     fragmentTransaction2.commit();

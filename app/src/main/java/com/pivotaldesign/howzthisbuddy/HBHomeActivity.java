@@ -12,9 +12,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.pivotaldesign.howzthisbuddy.adapter.HBDrawerListAdapter;
+import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationAdapter;
 import com.pivotaldesign.howzthisbuddy.bean.ResponseContactInfBO;
 import com.pivotaldesign.howzthisbuddy.fragments.HBAboutFragment;
 import com.pivotaldesign.howzthisbuddy.fragments.HBGivenFragment;
+import com.pivotaldesign.howzthisbuddy.fragments.HBNotificationFragment;
 import com.pivotaldesign.howzthisbuddy.fragments.HBOfferFragment;
 import com.pivotaldesign.howzthisbuddy.fragments.HBProfileFragment;
 import com.pivotaldesign.howzthisbuddy.fragments.HBReceivedFragment;
@@ -40,6 +42,7 @@ import android.content.SharedPreferences.Editor;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -58,7 +61,7 @@ import android.widget.Toast;
  * @author Satish Kolawale
  *
  */
-public class HBHomeActivity extends Activity implements HBNotifier{
+public class HBHomeActivity extends Activity implements HBNotifier, HBNotificationFragment.OnFragmentInteractionListener {
 
 	
 	private DrawerLayout mDrawerLayout;
@@ -203,8 +206,13 @@ public class HBHomeActivity extends Activity implements HBNotifier{
 		
 		//fetchContacts();
 	}
-	
-	
+
+	@Override
+	public void onFragmentInteraction(Uri uri) {
+
+	}
+
+
 	/**
 	 * Slide menu item click listener
 	 * */
