@@ -33,7 +33,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
-        android:name="com.pivotaldesign.howzthisbuddy.application.HBApplication"
+        android:name=".application.HBApplication"
         android:allowBackup="true"
         android:icon="@drawable/launcher_icon_xxhdpi"
         android:label="@string/app_name"
@@ -57,29 +57,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="HBHomeActivity"
+            android:name=".HBHomeActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
         <activity
-            android:name="HBOpinionGivenDetailActivity"
+            android:name=".HBOpinionGivenDetailActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
         <activity
-            android:name="HBOpinionReceivedDetailActivity"
+            android:name=".HBOpinionReceivedDetailActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
         <activity
-            android:name="HBRegistrationActivity"
+            android:name=".HBRegistrationActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
-        <activity android:name="GCMMessageView" >
+        <activity android:name=".GCMMessageView" >
         </activity>
 
-        <service android:name="GCMIntentService" />
+        <service android:name=".GCMIntentService" />
 
         <receiver
             android:name="com.google.android.gcm.GCMBroadcastReceiver"
@@ -91,6 +91,11 @@
                 <category android:name="com.pivotaldesign.howzthisbuddy" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name=".util.HBNotificationActivity"
+            android:label="@string/title_activity_hbnotification" >
+        </activity>
     </application>
 
 </manifest>

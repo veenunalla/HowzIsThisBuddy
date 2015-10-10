@@ -31,5 +31,6 @@
     <string name="regbutton">Share and Push Messsage</string>
     <string name="msglbl">"Message : "</string>
  <string name="action_settings">"Action Settings : "</string>
+    <string name="title_activity_hbnotification">HBNotificationActivity</string>
 
 </resources>
