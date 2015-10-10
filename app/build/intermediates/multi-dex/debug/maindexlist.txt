@@ -123,6 +123,7 @@ com/google/ads/AdRequest.class
 com/google/android/gms/internal/y.class
 com/google/android/gms/internal/ef.class
 android/support/v4/app/FragmentManager$BackStackEntry.class
+com/pivotaldesign/howzthisbuddy/fragments/HBNotificationFragment.class
 android/support/annotation/StringRes.class
 com/pivotaldesign/howzthisbuddy/adapter/HBDrawerListAdapter.class
 -keep class com.pivotaldesign.howzthisbuddy.HBOpinionGivenDetailActivity { <init>(); }
@@ -285,6 +286,7 @@ com/pivotaldesign/howzthisbuddy/HBHomeActivity$2.class
 android/support/v4/widget/MaterialProgressDrawable$4.class
 com/google/android/gms/wallet/MaskedWallet.class
 com/google/android/gms/internal/dp.class
+com/pivotaldesign/howzthisbuddy/fragments/HBNotificationFragment$OnFragmentInteractionListener.class
 com/google/android/gms/maps/GoogleMap.class
 com/google/android/gms/internal/ex.class
 android/support/v4/util/SimpleArrayMap.class

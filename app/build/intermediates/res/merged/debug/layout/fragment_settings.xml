@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:orientation="vertical" >
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,13 +13,12 @@
         android:padding="10dp"
         android:id="@+id/settings_title_label"
         android:background="#E1E1E1"
-        android:gravity="center"/>
+        android:gravity="center" />
 
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@null"
         android:id="@+id/settings_listview"></ListView>
     <!--<RelativeLayout-->
     <!--android:layout_width="match_parent"-->
