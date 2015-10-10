@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFBB33" >
+
+        <TextView
+            android:id="@+id/txt_registration_popup_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:scaleType="center"
+            android:text="Confirm Registration" />
+
+        <ImageView
+            android:id="@+id/img_registration_popup_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:drawable/ic_delete" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_registration_popup_verification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="Phone Number Verification"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_registration_popup_ask_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:gravity="center_horizontal"
+                android:text="Is this your Contact number?"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <TextView
+                android:id="@+id/txt_registration_popup_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="(+9)999.999.9999"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_registration_popup_verification_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="Enter your verification code?"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <EditText
+                android:id="@+id/edt_registration_popup_verification_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="Verification Code"
+                android:maxLength="6"
+                android:inputType="number"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <Button
+                android:id="@+id/btn_registration_popup_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Submit"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <TextView
+                android:id="@+id/txt_registration_popup_press_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="If you do not receive your access code within 60 seconds. Press Send Again..."
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+-injars '/Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/build/intermediates/multi-dex/debug/allclasses.jar'
+-outjars '/Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/build/intermediates/multi-dex/debug/componentClasses.jar'
+
+-libraryjars /Users/VenuNalla/Library/Android/sdk/build-tools/23.0.0/lib/shrinkedAndroid.jar
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontpreverify
+-dontwarn
+-printconfiguration '/Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/build/intermediates/multi-dex/debug/components.flags'
+
+
+-keep class com.pivotaldesign.howzthisbuddy.application.HBApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class com.pivotaldesign.howzthisbuddy.HBSplashActivity {
+    <init>();
+}
+
+-keep class com.pivotaldesign.howzthisbuddy.HBHomeActivity {
+    <init>();
+}
+
+-keep class com.pivotaldesign.howzthisbuddy.HBOpinionGivenDetailActivity {
+    <init>();
+}
+
+-keep class com.pivotaldesign.howzthisbuddy.HBOpinionReceivedDetailActivity {
+    <init>();
+}
+
+-keep class com.pivotaldesign.howzthisbuddy.HBRegistrationActivity {
+    <init>();
+}
+
+-keep class com.pivotaldesign.howzthisbuddy.GCMMessageView {
+    <init>();
+}
+
+-keep class com.pivotaldesign.howzthisbuddy.GCMIntentService {
+    <init>();
+}
+
+-keep class com.google.android.gcm.GCMBroadcastReceiver {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}

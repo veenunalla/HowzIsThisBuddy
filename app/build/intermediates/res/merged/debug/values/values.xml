@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/VenuNalla/Projects/Android%20Projects/HowzIsThisBuddy/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="nav_drawer_items">
+        <!-- <item>Request Launch</item> -->
+        <item>Opinions\nReceived</item>
+        <item>Opinions\nGiven</item>
+        <!-- <item>Opinions\nResponse</item> -->
+        <item>Profile</item>
+        <item>Settings</item>
+        <item>Share with\nFriends</item>
+        <item>About Us</item>
+        <item>Offers</item>
+    </string-array>
+    <!-- From: file:/Users/VenuNalla/Projects/Android%20Projects/HowzIsThisBuddy/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="black_overlay">#66000000</color>
+    <color name="color_button_bg">#e1e1e1</color>
+    <color name="color_given_response_bg">#D6D6D6</color>
+    <color name="color_offer_cell_even_bg">#F6F6F6</color>
+    <color name="color_offer_cell_odd_bg">#E8E8E8</color>
+    <color name="color_textview_bg">#ebebeb</color>
+    <color name="color_transparent">#500000</color>
+    <color name="color_user_profile_bg">#CACACA</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#992416</color>
+    <color name="list_divider">#272727</color>
+    <color name="list_item_title">#fff</color>
+    <declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="metaButtonBarStyle"/><attr format="reference" name="metaButtonBarButtonStyle"/></declare-styleable>
+    <!-- From: file:/Users/VenuNalla/Projects/Android%20Projects/HowzIsThisBuddy/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="action_settings">"Action Settings : "</string>
+    <string name="app_name">Howzthisbuddy</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">Splash Screen</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="msglbl">"Message : "</string>
+    <string name="regbutton">Share and Push Messsage</string>
+    <string name="str_opinion_given_title">Opinions to be Given</string>
+    <string name="str_opinion_received_detail_invite_more_buddy">Request more</string>
+    <string name="str_opinion_received_title">List of opinions received</string>
+    <string name="str_opinion_response_describe_hint">Describe your thoughts...</string>
+    <string name="str_opinion_response_send_your_opinion">Send Your Opinion</string>
+    <string name="str_opinion_response_your_opinion">Your Opinion</string>
+    <string name="str_received_invite_buddy">Request Opinion</string>
+    <string name="str_received_search_hint">Search Buddy from your Contact</string>
+    <!-- From: file:/Users/VenuNalla/Projects/Android%20Projects/HowzIsThisBuddy/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:homeAsUpIndicator">@drawable/back_arrow</item>
+    </style>
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+    <style name="ButtonBarButton"/>
+    <style name="CustomTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">@style/ButtonBar</item>
+        <item name="metaButtonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:icon">@drawable/menu_icon</item>
+    </style>
+</resources>

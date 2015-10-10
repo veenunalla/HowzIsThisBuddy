@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E1E1E1" >
+
+        <TextView
+            android:id="@+id/txt_profile_profile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="Profile"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/txt_profile_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/drawable_button_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Done"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txt_profile_pic_cam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/txt_profile_done"
+            android:background="@drawable/drawable_button_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Cam"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <ImageView
+            android:id="@+id/iv_profile_pic"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/user_profile" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E1E1E1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txt_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp"
+                    android:text="Name: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/edt_profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txt_profile_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#E1E1E1"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp"
+                    android:text="Email: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/edt_profile_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E1E1E1"
+                    android:gravity="center_vertical"
+                    android:inputType="textEmailAddress"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txt_profile_mobile_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#E1E1E1"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp"
+                    android:text="Phone: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/edt_profile_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E1E1E1"
+                    android:editable="false"
+                    android:gravity="center_vertical"
+                    android:inputType="textPhonetic"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/img_profile_facebook_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/facebook_login"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

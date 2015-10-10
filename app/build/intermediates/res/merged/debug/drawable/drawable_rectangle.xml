@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/selectable_kachel_shape">
+        <shape android:shape="rectangle" >
+            <stroke android:width="5dp" />
+        </shape>
+    </item>
+
+</layer-list><!-- From: file:/Users/VenuNalla/Projects/Android%20Projects/HowzIsThisBuddy/app/src/main/res/drawable/drawable_rectangle.xml -->

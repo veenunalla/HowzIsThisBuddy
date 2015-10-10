@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E1E1E1" >
+
+        <TextView
+            android:id="@+id/txt_settings_settings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="Settings"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+      
+        
+          
+         
+          <TextView
+            android:id="@+id/txt_settings_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/drawable_button_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Done"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F6F6F6"
+        android:layout_marginTop="1dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/txt_settings_notification_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="Notification" />
+
+        <ToggleButton
+            android:id="@+id/toggle_settings_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_settings_on_off"
+            android:gravity="start|center_vertical"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+    <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E1E1" /> -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="#F6F6F6"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/txt_settings_location_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="My Location" />
+
+        <ToggleButton
+            android:id="@+id/toggle_settings_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_settings_on_off"
+            android:checked="true"
+            android:gravity="start|center_vertical"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E1E1" />
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_registration_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#F1B206"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Registration"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/txt_registration_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="10dp"
+                android:text="How z This Buddy is a platform to provide peer and friends feedback on a suitability of product in real time. By entering into this site you allow the product vendor to send mobile promotions in future."
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Spinner
+                android:id="@+id/spn_registration_country"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/spnr_style"
+                android:ems="10"
+                android:hint="Country"
+                android:inputType="text"
+                android:textColor="#FBFBFB"
+                android:textColorHint="#D8D8D8" >
+            </Spinner>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/edt_registration_country_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="8"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:inputType="number"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/edt_registration_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="2"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_registration_phone_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="(Country code followed by phone number)"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/txt_registration_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Verification code will be sent to your phone as SMS"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Button
+                android:id="@+id/btn_registration_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

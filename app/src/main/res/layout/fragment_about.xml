@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_about_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E1E1E1"
+                android:padding="10dp"
+                android:text="About Us"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/splash_logo" />
+
+            <TextView
+                android:id="@+id/txt_about_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                android:text="Version 1.0"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/txt_about_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="10dp"
+                android:text="Android apps are built as a combination of distinct components that can be invoked individually. For instance, an individual activity provides a single screen for a user interface, and a service independently performs work in the background."
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/txt_about_visit_site"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="Visit our Website"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/txt_about_site_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="www.HowzThisBuddy.com"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/holo_red_dark" />
+
+            <Button
+                android:id="@+id/btn_about_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Email Us" />
+
+            <Button
+                android:id="@+id/btn_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Privacy Policy" />
+
+            <Button
+                android:id="@+id/btn_about_terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Terms and Conditions" />
+
+            <TextView
+                android:id="@+id/txt_about_copyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Copyright © 2014, All Rights Reserved"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+         />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

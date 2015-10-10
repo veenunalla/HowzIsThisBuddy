@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/layout_user_profile" />
+
+        <TextView
+            android:id="@+id/txt_opinion_received_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/str_opinion_received_title" />
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EBEBEB"
+            />
+
+        <ListView
+            android:id="@+id/list_opinion_received"
+            android:layout_width="match_parent"
+            android:divider="#DBDBDB"
+            android:dividerHeight="1dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

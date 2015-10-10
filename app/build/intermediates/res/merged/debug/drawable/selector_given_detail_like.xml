@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/like_selected" android:state_pressed="true"/>
+    <item android:drawable="@drawable/like_selected" android:state_selected="true"/>
+    <item android:drawable="@drawable/like"/>
+
+</selector><!-- From: file:/Users/VenuNalla/Projects/Android%20Projects/HowzIsThisBuddy/app/src/main/res/drawable/selector_given_detail_like.xml -->

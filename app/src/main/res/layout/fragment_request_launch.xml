@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txt_received_invite_buddy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:background="@color/color_button_bg"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/str_received_invite_buddy"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_received_invite_buddy"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <include layout="@layout/layout_user_profile" />
+
+        <include layout="@layout/layout_product_details" />
+
+        <EditText
+            android:id="@+id/edt_received_search_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:drawableEnd="@android:drawable/ic_menu_search"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:hint="@string/str_received_search_hint"
+            android:inputType="text"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+        <ListView
+            android:id="@+id/list_received_buddy_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

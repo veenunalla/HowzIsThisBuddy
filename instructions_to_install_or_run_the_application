@@ -1,0 +1,44 @@
+please unzip the folder some where.
+
+Instruction to test the application on eclipse android
+
+If you have android eclipse on your desktop or laptop.
+
+open ur android eclipse 
+
+and select the workspeace
+
+and choose file option in the menu
+ 
+and choose import -> Android -> Existing Android Code into workspeace.
+
+ select that option and click on next button it takes you to the next screen 
+
+and after that select browse button and choose the unziped file location and select memory game folder in that unzip folder
+
+and select ok button 
+
+after that create android virtual device to check the output of the application.
+
+after that click on finish button then the project was imported to your work speace afterwards select the project and right click on it
+
+and choose RunAs -> Android Application.
+
+If you have created the Android Virtual device then only it will displays the output.
+
+If you don't have an android Eclipse but If you have an android device 
+
+then let's try this to install the application on your device.
+
+
+Please find the .apk file in the zip folder and 
+
+copy that .apk file into your device. 
+
+and after that open that copied location of apk file in your mobile.
+ 
+and select that .apk file and click on that .apk file
+
+and next follow the instructions to install the application in your device.
+
+Thank you
