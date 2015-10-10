@@ -322,18 +322,17 @@ public class HBHomeActivity extends Activity implements HBNotifier{
 		if(notifierId == 3)
 			displayView(3);
 	}
-	
-	/*@Override
-	public void onBackPressed() {
-		if(_currentPageIndex != 0)
-			displayView(0);
-		else
-			super.onBackPressed();
-	}*/
-	
-	
+
 	@Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
+	public void onBackPressed() {
+		int count = getFragmentManager().getBackStackEntryCount();
+		Log.d("Back Fragment Count", "Count " + getFragmentManager().getBackStackEntryCount());
+		super.onBackPressed();
+
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
        
         	   Intent homeIntent = new Intent(Intent.ACTION_MAIN);

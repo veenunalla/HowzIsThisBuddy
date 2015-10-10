@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.pivotaldesign.howzthisbuddy.R;
+import com.pivotaldesign.howzthisbuddy.application.HBApplication;
 import com.pivotaldesign.howzthisbuddy.fragments.HBSettingsFragment;
 import com.pivotaldesign.howzthisbuddy.model.HBDrawerItem;
 
@@ -60,6 +61,7 @@ public class HBSettingAdapter extends BaseAdapter {
         settings_item_image.setImageResource(image_drawable_id);
         TextView setting_item_textview = (TextView) view.findViewById(R.id.settings_item_textview);
         setting_item_textview.setText(settings_model_item.getSettingItemName());
+        setting_item_textview.setTypeface(HBApplication.getInstance().getRegularFont());
 
 
         return view;

@@ -4,16 +4,21 @@
 package com.pivotaldesign.howzthisbuddy.fragments;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.pivotaldesign.howzthisbuddy.R;
 import com.pivotaldesign.howzthisbuddy.adapter.HBSettingAdapter;
 import com.pivotaldesign.howzthisbuddy.application.HBApplication;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -31,10 +36,24 @@ public class HBSettingsFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
  
         View rootView = inflater.inflate(R.layout.fragment_settings, container, false);
-        settingsListview = (ListView) rootView.findViewById(R.id.settings_listview);
+
+        initUI(rootView);
         addSettingsItemsToListView();
         settingAdapter = new HBSettingAdapter(getActivity().getApplicationContext(), settingsItems);
         settingsListview.setAdapter(settingAdapter);
+        settingsListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                if (position == 0) {
+                    FragmentManager fragmentManager2 = getFragmentManager();
+                    FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
+                    HBProfileFragment fragment2 = new HBProfileFragment();
+                    fragmentTransaction2.replace(R.id.frame_container, fragment2);
+                    fragmentTransaction2.addToBackStack(null);
+                    fragmentTransaction2.commit();
+                }
+            }
+        });
 
 //        ((TextView) rootView.findViewById(R.id.txt_settings_settings_title)).setTypeface(HBApplication.getInstance().getRegularFont());
 //        ((TextView) rootView.findViewById(R.id.txt_settings_done)).setTypeface(HBApplication.getInstance().getRegularFont());
@@ -43,6 +62,12 @@ public class HBSettingsFragment extends Fragment{
 //        ((TextView) rootView.findViewById(R.id.txt_settings_location_title)).setTypeface(HBApplication.getInstance().getRegularFont());
         
         return rootView;
+    }
+
+    private void initUI(View rootView) {
+        TextView settingsTitle = (TextView) rootView.findViewById(R.id.settings_title_label);
+        settingsTitle.setTypeface(HBApplication.getInstance().getRegularFont());
+        settingsListview = (ListView) rootView.findViewById(R.id.settings_listview);
     }
 
     private void addSettingsItemsToListView() {
@@ -60,6 +85,7 @@ public class HBSettingsFragment extends Fragment{
         settingsModel.setSettingItemThumbImage("settings_location");
         settingsItems.add(settingsModel);
     }
+
 
     public static class SettingsModel {
         private String settingItemName;
