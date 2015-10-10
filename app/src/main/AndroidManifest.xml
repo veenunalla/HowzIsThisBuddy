@@ -93,7 +93,7 @@
         </receiver>
 
         <activity
-            android:name=".util.HBNotificationActivity"
+            android:name=".HBNotificationActivity"
             android:label="@string/title_activity_hbnotification" >
         </activity>
     </application>

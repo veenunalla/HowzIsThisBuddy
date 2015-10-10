@@ -1,4 +1,4 @@
-package com.pivotaldesign.howzthisbuddy.util;
+package com.pivotaldesign.howzthisbuddy;
 
 import android.app.Activity;
 import android.os.Bundle;
