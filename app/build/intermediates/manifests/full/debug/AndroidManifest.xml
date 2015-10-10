@@ -91,6 +91,11 @@
                 <category android:name="com.pivotaldesign.howzthisbuddy" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name="com.pivotaldesign.howzthisbuddy.HBNotificationActivity"
+            android:label="@string/title_activity_hbnotification" >
+        </activity>
     </application>
 
 </manifest>

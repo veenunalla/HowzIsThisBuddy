@@ -28,6 +28,10 @@
     <color name="list_divider">#272727</color>
     <color name="list_item_title">#fff</color>
     <declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="metaButtonBarStyle"/><attr format="reference" name="metaButtonBarButtonStyle"/></declare-styleable>
+    <!-- From: file:/Users/VenuNalla/Projects/Android%20Projects/HowzIsThisBuddy/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- From: file:/Users/VenuNalla/Projects/Android%20Projects/HowzIsThisBuddy/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">"Action Settings : "</string>
@@ -46,6 +50,7 @@
     <string name="str_opinion_response_your_opinion">Your Opinion</string>
     <string name="str_received_invite_buddy">Request Opinion</string>
     <string name="str_received_search_hint">Search Buddy from your Contact</string>
+    <string name="title_activity_hbnotification">HBNotificationActivity</string>
     <!-- From: file:/Users/VenuNalla/Projects/Android%20Projects/HowzIsThisBuddy/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:2:1-96:12
+ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:2:1-101:12
 	package
 		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml
@@ -91,7 +91,7 @@ ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/ma
 	android:name
 		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:33:22-65
 application
-ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:35:5-94:19
+ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:35:5-99:19
 	android:label
 		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:39:9-41
 	android:allowBackup
@@ -101,7 +101,7 @@ ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/ma
 	android:theme
 		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:40:9-40
 	android:name
-		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:36:9-81
+		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:36:9-50
 activity#com.pivotaldesign.howzthisbuddy.HBSplashActivity
 ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:41:9-58:20
 	android:label
@@ -143,7 +143,7 @@ ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/ma
 	android:windowSoftInputMode
 		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:62:13-67
 	android:name
-		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:60:13-42
+		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:60:13-43
 activity#com.pivotaldesign.howzthisbuddy.HBOpinionGivenDetailActivity
 ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:64:9-68:20
 	android:screenOrientation
@@ -151,7 +151,7 @@ ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/ma
 	android:windowSoftInputMode
 		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:67:13-67
 	android:name
-		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:65:13-56
+		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:65:13-57
 activity#com.pivotaldesign.howzthisbuddy.HBOpinionReceivedDetailActivity
 ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:69:9-73:20
 	android:screenOrientation
@@ -159,7 +159,7 @@ ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/ma
 	android:windowSoftInputMode
 		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:72:13-67
 	android:name
-		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:70:13-59
+		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:70:13-60
 activity#com.pivotaldesign.howzthisbuddy.HBRegistrationActivity
 ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:74:9-78:20
 	android:screenOrientation
@@ -167,15 +167,15 @@ ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/ma
 	android:windowSoftInputMode
 		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:77:13-67
 	android:name
-		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:75:13-50
+		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:75:13-51
 activity#com.pivotaldesign.howzthisbuddy.GCMMessageView
 ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:79:9-80:20
 	android:name
-		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:79:19-48
+		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:79:19-49
 service#com.pivotaldesign.howzthisbuddy.GCMIntentService
-ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:82:9-52
+ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:82:9-53
 	android:name
-		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:82:18-49
+		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:82:18-50
 receiver#com.google.android.gcm.GCMBroadcastReceiver
 ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:84:9-93:20
 	android:permission
@@ -196,3 +196,9 @@ category#com.pivotaldesign.howzthisbuddy
 ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:91:17-76
 	android:name
 		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:91:27-73
+activity#com.pivotaldesign.howzthisbuddy.HBNotificationActivity
+ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:95:9-98:20
+	android:label
+		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:97:13-66
+	android:name
+		ADDED from /Users/VenuNalla/Projects/Android Projects/HowzIsThisBuddy/app/src/main/AndroidManifest.xml:96:13-51

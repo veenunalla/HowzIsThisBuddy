@@ -67,8 +67,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 				.setContentIntent(pIntent)
 				.setSound(soundUri)
 				.setContentText(message).setContentIntent(pIntent)
-				.setPriority(Notification.PRIORITY_HIGH)
-				.addAction(R.drawable.launcher_icon, "View", pIntent).addAction(0, "Remind", pIntent).build();
+				.setPriority(Notification.PRIORITY_HIGH).build();
 		
 		// Remove the notification on click
 		notification.flags |= Notification.FLAG_AUTO_CANCEL;

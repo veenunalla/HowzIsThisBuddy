@@ -10,6 +10,7 @@
 -keep class com.pivotaldesign.howzthisbuddy.GCMMessageView { <init>(); }
 -keep class com.pivotaldesign.howzthisbuddy.GCMIntentService { <init>(); }
 -keep class com.google.android.gcm.GCMBroadcastReceiver { <init>(); }
+-keep class com.pivotaldesign.howzthisbuddy.HBNotificationActivity { <init>(); }
 -keep public class * extends android.app.backup.BackupAgent {
     <init>();
 }

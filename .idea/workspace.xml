@@ -5,12 +5,170 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e20663-6e35-44d1-936d-0b74d15e5d8f" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/util/HBNotificationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/HBNotificationActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_hbnotification.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_hbnotification.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_hbnotification.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_hbnotification.xml" />
+    <list default="true" id="31e20663-6e35-44d1-936d-0b74d15e5d8f" name="Default" comment="Compleded Settings Fragment UI. Added New Class HBSettingsAdapter, New Layout resource file layout_settings_list_item.xml">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/adapter/HBSettingAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_settings_list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/AddressBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/AddressBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/AppUtilities.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/AppUtilities.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/CheckInternet.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/CheckInternet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/ContactDetailsBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/ContactDetailsBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/CustomerSupportBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/CustomerSupportBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/DeviceDetailsBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/DeviceDetailsBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/DynamicImageLoader$BitmapimgDisplayer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/DynamicImageLoader$BitmapimgDisplayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/DynamicImageLoader$ImgPhotosLoader.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/DynamicImageLoader$ImgPhotosLoader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/DynamicImageLoader.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/DynamicImageLoader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/FleCache.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/FleCache.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/GCMIntentService$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/GCMIntentService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/GCMIntentService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/GCMIntentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/GCMMessageView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/GCMMessageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBAboutFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBAboutFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/application/HBApplication.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/application/HBApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBContactsAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBContactsAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBContactsAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBContactsAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBContactsAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBContactsAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBDrawerListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBDrawerListAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBGivenDetailFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBGivenDetailFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBGivenFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBGivenFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBGivenFragment$HBgetOpinionsToBeGivenList.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBGivenFragment$HBgetOpinionsToBeGivenList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBGivenFragment$HBgetOpinionsToBeGivenListDetail.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBGivenFragment$HBgetOpinionsToBeGivenListDetail.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBGivenFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBGivenFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenResponseAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenResponseAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenResponseAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenResponseAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenResponseAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBGivenResponseAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBHomeActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBHomeActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBHomeActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBHomeActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBHomeActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBHomeActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBHomeActivity$SlideMenuClickListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBHomeActivity$SlideMenuClickListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBHomeActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBHomeActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOfferAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOfferAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOfferAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOfferAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOfferAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOfferAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBOfferFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBOfferFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionGivenDetailActivity$SectionsPagerAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionGivenDetailActivity$SectionsPagerAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionGivenDetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionGivenDetailActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBOpinionGivenFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBOpinionGivenFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity$HBRsendcaptureselfie.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity$HBRsendcaptureselfie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity$SectionsPagerAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity$SectionsPagerAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBOpinionReceivedDetailActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedNoResponseAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedNoResponseAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedNoResponseAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedNoResponseAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedNoResponseAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedNoResponseAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedRespondedAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedRespondedAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedRespondedAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedRespondedAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedRespondedAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBOpinionReceivedRespondedAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBPendingDetailFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBPendingDetailFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBPendingDetailFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBPendingDetailFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBPendingResponseAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBPendingResponseAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBPendingResponseAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBPendingResponseAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBPendingResponseAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBPendingResponseAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBProfileFragment$HBprofileupdate.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBProfileFragment$HBprofileupdate.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBProfileFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBProfileFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment$HBRgetallitemopinionrequests.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment$HBRgetallitemopinionrequests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment$HBRgetselecteditemopinionrequests.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment$HBRgetselecteditemopinionrequests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment$HBRsendcaptureselfie.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment$HBRsendcaptureselfie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment$UORS_Adapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment$UORS_Adapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedNoResponseFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedNoResponseFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedRespondedFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedRespondedFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedRespondedFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedRespondedFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedRespondedFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedRespondedFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$HBROTPreq.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$HBROTPreq.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$HBRRegistraionreq.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$HBRRegistraionreq.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBRegistrationActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRegistrationFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRegistrationFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRegistrationFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRegistrationFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRegistrationFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRegistrationFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment$HBRRequestopinion.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment$HBRRequestopinion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment$MyAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment$MyAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment$MyAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment$MyAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBResponseFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBResponseFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBResponseFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBResponseFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBResponseFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBResponseFragment$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBResponseFragment$HBrespondopinion.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBResponseFragment$HBrespondopinion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBResponseFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBResponseFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBSearchAdapter$ImageDownloaderTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBSearchAdapter$ImageDownloaderTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBSearchAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBSearchAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBSearchAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/adapter/HBSearchAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBSettingsFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBSettingsFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBShareFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/HBShareFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/HBSplashActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/HowZBuddyProfileBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/HowZBuddyProfileBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/ImageCompressionAsyncTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/ImageCompressionAsyncTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/ItemBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/ItemBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/ItemScanRequestBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/ItemScanRequestBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/ItemScanResponseBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/ItemScanResponseBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/ItemSelfieDetailsBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/ItemSelfieDetailsBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/MemCache.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/MemCache.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$array.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$array.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/SystemUiHider$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/SystemUiHider$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/SystemUiHider.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/SystemUiHider.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/SystemUiHiderBase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/SystemUiHiderBase.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/SystemUiHiderHoneycomb$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/SystemUiHiderHoneycomb$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/SystemUiHiderHoneycomb.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/util/SystemUiHiderHoneycomb.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/UserBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/UserBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/UserProfilePictureBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/UserProfilePictureBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/VendorBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/VendorBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/VendorProfileBO.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/bean/VendorProfileBO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/ViewSelifie.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pivotaldesign/howzthisbuddy/fragments/ViewSelifie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/allclasses.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/allclasses.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/componentClasses.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/componentClasses.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/GCMIntentService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/GCMIntentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/fragments/HBSettingsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/fragments/HBSettingsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/pivotaldesign/howzthisbuddy/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/pivotaldesign/howzthisbuddy/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/components.flags" afterPath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/components.flags" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_settings.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/maindexlist.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/maindexlist.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/manifest_keep.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/manifest_keep.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HowzIsThisBuddy.iws" />
@@ -36,36 +194,82 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/GCMIntentService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+              <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HBNotificationActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/HBNotificationActivity.java">
+      <file leaf-file-name="HBSettingsFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/fragments/HBSettingsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62801933">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+              <folding>
+                <element signature="e#2714#2715#0" expanded="true" />
+                <element signature="e#2760#2761#0" expanded="true" />
+                <element signature="e#2940#2941#0" expanded="true" />
+                <element signature="e#2992#2993#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_hbnotification.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hbnotification.xml">
-          <provider selected="true" editor-type-id="android-designer">
+      <file leaf-file-name="HBSettingAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/adapter/HBSettingAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#951#952#0" expanded="true" />
+                <element signature="e#995#996#0" expanded="true" />
+                <element signature="e#1052#1053#0" expanded="true" />
+                <element signature="e#1083#1084#0" expanded="true" />
+                <element signature="e#1140#1141#0" expanded="true" />
+                <element signature="e#1171#1172#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout_settings_list_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_settings_list_item.xml">
+          <provider editor-type-id="android-designer">
             <state />
           </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.793103">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_settings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="35.689655">
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="36" />
+              <folding>
+                <marker date="1444478582000" expanded="true" signature="290:466" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1442,6 +1646,11 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_hbnotification.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/HBNotificationActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/GCMIntentService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/adapter/HBSettingAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/fragments/HBSettingsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_settings_list_item.xml" />
       </list>
     </option>
   </component>
@@ -1468,7 +1677,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -1548,6 +1757,24 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HowzIsThisBuddy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
@@ -1578,6 +1805,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HowzIsThisBuddy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="howzthisbuddy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HowzIsThisBuddy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="howzthisbuddy" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -1592,8 +1863,10 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4df1712b2f969f47" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4d00fad5b84ca009" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_4_API_21" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -1818,24 +2091,25 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32903227" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938856" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23800132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23800132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16258064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3432258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1850,7 +2124,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added New notification Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added New notification Controller" />
+    <MESSAGE value="Compleded Settings Fragment UI. Added New Class HBSettingsAdapter, New Layout resource file layout_settings_list_item.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Compleded Settings Fragment UI. Added New Class HBSettingsAdapter, New Layout resource file layout_settings_list_item.xml" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1872,8 +2148,14 @@
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/adapter/HBSettingAdapter.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1886,14 +2168,6 @@
             <element signature="e#3734#3735#0" expanded="true" />
             <element signature="e#3785#3786#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/GCMIntentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1910,9 +2184,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/HBNotificationActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62801933">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/GCMIntentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/fragments/HBOpinionGivenFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/fragments/HBReceivedRespondedFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/adapter/HBContactsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42682928">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/fragments/HBSettingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+          <folding>
+            <element signature="e#2714#2715#0" expanded="true" />
+            <element signature="e#2760#2761#0" expanded="true" />
+            <element signature="e#2940#2941#0" expanded="true" />
+            <element signature="e#2992#2993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_opinion_received_list_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19438446">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/adapter/HBDrawerListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5121951">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="57" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="35.689655">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <marker date="1444478582000" expanded="true" signature="290:466" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_settings_list_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.793103">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pivotaldesign/howzthisbuddy/adapter/HBSettingAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1171#1172#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

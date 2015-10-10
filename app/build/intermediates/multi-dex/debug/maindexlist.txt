@@ -54,6 +54,7 @@ com/google/android/gms/games/leaderboard/Leaderboard.class
 com/pivotaldesign/howzthisbuddy/HBHomeActivity$3.class
 }
 android/support/v4/widget/MaterialProgressDrawable$ProgressDrawableSize.class
+com/pivotaldesign/howzthisbuddy/R$menu.class
 android/support/annotation/InterpolatorRes.class
 com/google/android/gms/internal/bm.class
 com/pivotaldesign/howzthisbuddy/fragments/HBRequestLaunchFragment.class
@@ -232,6 +233,7 @@ android/support/v4/app/FragmentManagerImpl$4.class
 android/support/annotation/AnimRes.class
 com/google/android/gms/internal/jl.class
 com/google/android/gms/internal/ez.class
+-keep class com.pivotaldesign.howzthisbuddy.HBNotificationActivity { <init>(); }
 com/pivotaldesign/howzthisbuddy/application/HBApplication.class
 com/pivotaldesign/howzthisbuddy/HBRegistrationActivity$HBRRegistraionreq.class
 android/support/v4/app/FragmentManagerState.class
@@ -358,6 +360,7 @@ com/google/android/gms/wallet/Wallet.class
 com/google/android/gms/location/LocationStatusCodes.class
 com/google/android/gms/fitness/FitnessActivities.class
 com/google/android/gms/maps/MapFragment.class
+com/pivotaldesign/howzthisbuddy/HBNotificationActivity.class
 android/support/v4/app/FragmentManager.class
 com/google/android/gms/internal/ev.class
 com/google/android/gms/ads/search/SearchAdRequest.class
