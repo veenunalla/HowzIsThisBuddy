@@ -13,11 +13,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pivotaldesign.howzthisbuddy.R;
 import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationAdapter;
@@ -50,10 +54,13 @@ public class HBNotificationFragment extends Fragment {
     private Ringtone ringtone;
     private ListView notificationListView;
     private ArrayList<NotificationModel> notificationModelArrayList;
-
+    private String[] selectedRingtone;
+    private HBNotificationAdapter notificationAdapter;
     private OnFragmentInteractionListener mListener;
-
-    /**
+    public static final int NOTIFICATION_TITLE=0;
+    public static final int NOTIFICATION_URI=1;
+    public static final int NOTIFICATION_ID=2;
+     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
@@ -96,8 +103,8 @@ public class HBNotificationFragment extends Fragment {
         TextView notificationHeader = (TextView) header.findViewById(R.id.notification_header);
         notificationHeader.setTypeface(HBApplication.getInstance().getRegularFont());
         notificationListView.addHeaderView(header, null, false);
-        HBNotificationAdapter adapter = new HBNotificationAdapter(getActivity().getApplicationContext(), notificationModelArrayList);
-        notificationListView.setAdapter(adapter);
+        notificationAdapter = new HBNotificationAdapter(getActivity().getApplicationContext(), notificationModelArrayList);
+        notificationListView.setAdapter(notificationAdapter);
 
         notificationListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -112,15 +119,102 @@ public class HBNotificationFragment extends Fragment {
 
     private void showOptionsForSelections(View view, int position) {
         if (position == 1) {
-            ArrayList<String[]> getListOfRingTones = getNotifications();
+            ArrayList<String[]> getListOfRingTones = getAllNotificationsRingtonesList();
             showDialogForListOfNotificationRingTones(getListOfRingTones);
         } else if (position == 2) {
-            ArrayList sounds = getNotificationSoundsURI();
-            int x = sounds.size();
+            String[] vibrateOptions = new String[5];
+            vibrateOptions[0] = "Vibrate";
+            vibrateOptions[1] = "Off";
+            vibrateOptions[2] = "Default";
+            vibrateOptions[3] = "Short";
+            vibrateOptions[4] = "Long";
+            showDialogwithRadioButtons(R.layout.layout_notification_alertdialog_radiobuttons, vibrateOptions ,true);
         } else {
-
+            String[] popUpNotificationOptions = new String[5];
+            popUpNotificationOptions[0] = "Popup notification";
+            popUpNotificationOptions[1] = "No Popup";
+            popUpNotificationOptions[2] = "Only when screen \"On\" ";
+            popUpNotificationOptions[3] = "Only when screen \"Off\" ";
+            popUpNotificationOptions[4] = "Always show popup";
+            showDialogwithRadioButtons(R.layout.layout_notification_alertdialog_radiobuttons, popUpNotificationOptions ,false);
         }
 
+    }
+
+    private void showDialogwithRadioButtons(int layoutID, final String[] options, final boolean isVibrateAlertView) {
+        // custom dialog
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(layoutID);
+
+        TextView dialogTitle = (TextView)dialog.findViewById(R.id.radioButton_title);
+        dialogTitle.setText(options[0]);
+
+         // set the custom dialog components - text, image and button
+        RadioGroup radioGroup = (RadioGroup)dialog.findViewById(R.id.radio_group);
+        final RadioButton radioButton1 = (RadioButton)dialog.findViewById(R.id.radioButton_one);
+        radioButton1.setText(options[1]);
+        final RadioButton radioButton2 = (RadioButton)dialog.findViewById(R.id.radioButton_two);
+        radioButton2.setText(options[2]);
+
+        final RadioButton radioButton3= (RadioButton)dialog.findViewById(R.id.radioButton_three);
+        radioButton3.setText(options[3]);
+
+        final RadioButton radioButton4 = (RadioButton)dialog.findViewById(R.id.radioButton_four);
+        radioButton4.setText(options[4]);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // find which radio button is selected
+                if (checkedId == R.id.radioButton_one) {
+                    saveToSharedPreferenceAndUpdateListView(radioButton1.getText().toString(), isVibrateAlertView);
+                    dialog.dismiss();
+                } else if (checkedId == R.id.radioButton_two) {
+                    saveToSharedPreferenceAndUpdateListView(radioButton2.getText().toString(), isVibrateAlertView);
+                    dialog.dismiss();
+                } else if (checkedId == R.id.radioButton_three) {
+                    saveToSharedPreferenceAndUpdateListView(radioButton3.getText().toString(), isVibrateAlertView);
+                    dialog.dismiss();
+                } else {
+                    saveToSharedPreferenceAndUpdateListView(radioButton4.getText().toString(), isVibrateAlertView);
+                    dialog.dismiss();
+                }
+            }
+
+        });
+
+
+        Button cancelButton = (Button) dialog.findViewById(R.id.radioButton_canncel);
+        // if button is clicked, close the custom dialog
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        //Grab the window of the dialog, and change the width
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        Window window = dialog.getWindow();
+        lp.copyFrom(window.getAttributes());
+        //This makes the dialog take up the full width
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        window.setAttributes(lp);
+        dialog.show();
+    }
+
+    private void saveToSharedPreferenceAndUpdateListView(String message,boolean isVibrateAlertView) {
+        if (isVibrateAlertView){
+            notificationModelArrayList.get(1).setNotificationSubItemLabel(message);
+        }else {
+            notificationModelArrayList.get(2).setNotificationSubItemLabel(message);
+        }
+        notificationAdapter = new HBNotificationAdapter(getActivity().getApplicationContext(), notificationModelArrayList);
+        notificationListView.setAdapter(notificationAdapter);
+        notificationAdapter.notifyDataSetChanged();
     }
 
     private void showDialogForListOfNotificationRingTones(final ArrayList<String[]> getListOfRingTones) {
@@ -150,7 +244,8 @@ public class HBNotificationFragment extends Fragment {
                         ringtone.stop();
                     }
                 }
-
+                storeTheRingtoneInSharedPreferenceAndUpdateListView();
+                dialog.dismiss();
             }
         });
 
@@ -174,8 +269,7 @@ public class HBNotificationFragment extends Fragment {
                 try {
 
                     String[] notificationRingtone = getListOfRingTones.get(position);
-                    Uri notificationRingtoneURI = Uri.parse(notificationRingtone[1] + "/" + notificationRingtone[2]);
-//                    Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                    Uri notificationRingtoneURI = Uri.parse(notificationRingtone[NOTIFICATION_URI] + "/" + notificationRingtone[NOTIFICATION_ID]);
                     if (ringtone != null) {
                         if (ringtone.isPlaying()) {
                             ringtone.stop();
@@ -184,33 +278,26 @@ public class HBNotificationFragment extends Fragment {
                     ringtone = RingtoneManager.
                             getRingtone(getActivity().getApplicationContext(), notificationRingtoneURI);
                     ringtone.play();
+                    selectedRingtone = notificationRingtone;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         });
-
+        String[] notificationRingtone = getListOfRingTones.get(0);
+        selectedRingtone = notificationRingtone;
         dialog.show();
     }
 
-    public ArrayList<String> getNotificationSoundsURI() {
-        RingtoneManager manager = new RingtoneManager(getActivity().getApplicationContext());
-        manager.setType(RingtoneManager.TYPE_NOTIFICATION);
-        Cursor cursor = manager.getCursor();
-
-        ArrayList<String> list = new ArrayList<>();
-        while (cursor.moveToNext()) {
-            String id = cursor.getString(RingtoneManager.ID_COLUMN_INDEX);
-            String uri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX);
-
-            list.add(uri + "/" + id);
-        }
-
-        return list;
+    private void storeTheRingtoneInSharedPreferenceAndUpdateListView() {
+        notificationModelArrayList.get(0).setNotificationSubItemLabel("Default ringtone"+"("+selectedRingtone[NOTIFICATION_TITLE]+")");
+        notificationAdapter = new HBNotificationAdapter(getActivity().getApplicationContext(), notificationModelArrayList);
+        notificationListView.setAdapter(notificationAdapter);
+        notificationAdapter.notifyDataSetChanged();
     }
 
 
-    public ArrayList<String[]> getNotifications() {
+    public ArrayList<String[]> getAllNotificationsRingtonesList() {
         RingtoneManager manager = new RingtoneManager(getActivity().getApplicationContext());
         manager.setType(RingtoneManager.TYPE_RINGTONE);
         Cursor cursor = manager.getCursor();
@@ -221,9 +308,9 @@ public class HBNotificationFragment extends Fragment {
             String notificationTitle = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX);
             String notificationUri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX);
 
-            notificationArray[0] = notificationTitle;
-            notificationArray[1] = notificationUri;
-            notificationArray[2] = id;
+            notificationArray[NOTIFICATION_TITLE] = notificationTitle;
+            notificationArray[NOTIFICATION_URI] = notificationUri;
+            notificationArray[NOTIFICATION_ID] = id;
             list.add(notificationArray);
             Log.d("Notification", notificationTitle);
             Log.d("Notification URI", notificationUri);
