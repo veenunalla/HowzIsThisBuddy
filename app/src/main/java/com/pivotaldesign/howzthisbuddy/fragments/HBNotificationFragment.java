@@ -3,6 +3,7 @@ package com.pivotaldesign.howzthisbuddy.fragments;
 import android.app.Activity;
 import android.app.Dialog;
 import android.database.Cursor;
+import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationAdapter;
 import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationRingtoneAdapter;
 import com.pivotaldesign.howzthisbuddy.application.HBApplication;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -45,6 +47,7 @@ public class HBNotificationFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private Ringtone ringtone;
     private ListView notificationListView;
     private ArrayList<NotificationModel> notificationModelArrayList;
 
@@ -112,14 +115,15 @@ public class HBNotificationFragment extends Fragment {
             ArrayList<String[]> getListOfRingTones = getNotifications();
             showDialogForListOfNotificationRingTones(getListOfRingTones);
         } else if (position == 2) {
-
+            ArrayList sounds = getNotificationSoundsURI();
+            int x = sounds.size();
         } else {
 
         }
 
     }
 
-    private void showDialogForListOfNotificationRingTones(ArrayList<String[]> getListOfRingTones) {
+    private void showDialogForListOfNotificationRingTones(final ArrayList<String[]> getListOfRingTones) {
 
         ArrayList<String> notificationNamesList = new ArrayList<>();
         Iterator<String[]> tonesIterator = getListOfRingTones.iterator();
@@ -141,18 +145,68 @@ public class HBNotificationFragment extends Fragment {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (ringtone != null) {
+                    if (ringtone.isPlaying()) {
+                        ringtone.stop();
+                    }
+                }
+
             }
         });
+
         Button cancelButton = (Button) dialog.findViewById(R.id.notification_tones_cancel_button);
         // if button is clicked, close the custom dialog
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (ringtone != null) {
+                    if (ringtone.isPlaying()) {
+                        ringtone.stop();
+                    }
+                }
                 dialog.dismiss();
             }
         });
 
+        tonesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                try {
+
+                    String[] notificationRingtone = getListOfRingTones.get(position);
+                    Uri notificationRingtoneURI = Uri.parse(notificationRingtone[1] + "/" + notificationRingtone[2]);
+//                    Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                    if (ringtone != null) {
+                        if (ringtone.isPlaying()) {
+                            ringtone.stop();
+                        }
+                    }
+                    ringtone = RingtoneManager.
+                            getRingtone(getActivity().getApplicationContext(), notificationRingtoneURI);
+                    ringtone.play();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
         dialog.show();
+    }
+
+    public ArrayList<String> getNotificationSoundsURI() {
+        RingtoneManager manager = new RingtoneManager(getActivity().getApplicationContext());
+        manager.setType(RingtoneManager.TYPE_NOTIFICATION);
+        Cursor cursor = manager.getCursor();
+
+        ArrayList<String> list = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            String id = cursor.getString(RingtoneManager.ID_COLUMN_INDEX);
+            String uri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX);
+
+            list.add(uri + "/" + id);
+        }
+
+        return list;
     }
 
 
@@ -162,11 +216,14 @@ public class HBNotificationFragment extends Fragment {
         Cursor cursor = manager.getCursor();
         ArrayList<String[]> list = new ArrayList<>();
         while (cursor.moveToNext()) {
-            String[] notificationArray = new String[2];
+            String[] notificationArray = new String[3];
+            String id = cursor.getString(RingtoneManager.ID_COLUMN_INDEX);
             String notificationTitle = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX);
             String notificationUri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX);
+
             notificationArray[0] = notificationTitle;
             notificationArray[1] = notificationUri;
+            notificationArray[2] = id;
             list.add(notificationArray);
             Log.d("Notification", notificationTitle);
             Log.d("Notification URI", notificationUri);
@@ -216,6 +273,7 @@ public class HBNotificationFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
 
     /**
      * This interface must be implemented by activities that contain this
