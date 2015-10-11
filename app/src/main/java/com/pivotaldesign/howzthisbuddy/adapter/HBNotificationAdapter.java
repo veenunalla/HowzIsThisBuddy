@@ -81,15 +81,6 @@ public class HBNotificationAdapter extends BaseAdapter implements CompoundButton
 
         holder.notifciationItem.setText(notificationModel.getNotificationItemLabel());
         holder.notificationSubItem.setText(notificationModel.getNotificationSubItemLabel());
-
-        holder.notificationConversationBox = (CheckBox) view.findViewById(R.id.checkbox_conversation);
-        holder.notificationConversationBox.setTag(position);
-        holder.notificationConversationBox.setOnCheckedChangeListener(this);
-        if (position == 0) {
-            holder.notificationConversationBox.setVisibility(View.VISIBLE);
-        } else {
-            holder.notificationConversationBox.setVisibility(View.GONE);
-        }
         return view;
     }
 }

@@ -1,18 +1,32 @@
 package com.pivotaldesign.howzthisbuddy.fragments;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.database.Cursor;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.pivotaldesign.howzthisbuddy.R;
 import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationAdapter;
+import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationRingtoneAdapter;
+import com.pivotaldesign.howzthisbuddy.application.HBApplication;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,10 +88,90 @@ public class HBNotificationFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_hbnotification, container, false);
         initUI(rootView);
 
+        LayoutInflater headerInflater = getActivity().getLayoutInflater();
+        ViewGroup header = (ViewGroup) headerInflater.inflate(R.layout.layout_notification_item_header, notificationListView, false);
+        TextView notificationHeader = (TextView) header.findViewById(R.id.notification_header);
+        notificationHeader.setTypeface(HBApplication.getInstance().getRegularFont());
+        notificationListView.addHeaderView(header, null, false);
         HBNotificationAdapter adapter = new HBNotificationAdapter(getActivity().getApplicationContext(), notificationModelArrayList);
         notificationListView.setAdapter(adapter);
 
+        notificationListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                showOptionsForSelections(view, position);
+            }
+        });
+
+
         return rootView;
+    }
+
+    private void showOptionsForSelections(View view, int position) {
+        if (position == 1) {
+            ArrayList<String[]> getListOfRingTones = getNotifications();
+            showDialogForListOfNotificationRingTones(getListOfRingTones);
+        } else if (position == 2) {
+
+        } else {
+
+        }
+
+    }
+
+    private void showDialogForListOfNotificationRingTones(ArrayList<String[]> getListOfRingTones) {
+
+        ArrayList<String> notificationNamesList = new ArrayList<>();
+        Iterator<String[]> tonesIterator = getListOfRingTones.iterator();
+        while (tonesIterator.hasNext()) {
+            String[] notificationItem = tonesIterator.next();
+            notificationNamesList.add(notificationItem[0]);
+        }
+        // custom dialog
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.layout_notification_ringtone_view);
+        // set the custom dialog components - text, image and button
+        ListView tonesListView = (ListView) dialog.findViewById(R.id.listview_notification_tones_list);
+        HBNotificationRingtoneAdapter adapter = new HBNotificationRingtoneAdapter(getActivity().getApplicationContext(), notificationNamesList);
+        tonesListView.setAdapter(adapter);
+
+        Button okButton = (Button) dialog.findViewById(R.id.notification_tones_ok_button);
+        // if button is clicked, close the custom dialog
+        okButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+        Button cancelButton = (Button) dialog.findViewById(R.id.notification_tones_cancel_button);
+        // if button is clicked, close the custom dialog
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+
+    public ArrayList<String[]> getNotifications() {
+        RingtoneManager manager = new RingtoneManager(getActivity().getApplicationContext());
+        manager.setType(RingtoneManager.TYPE_RINGTONE);
+        Cursor cursor = manager.getCursor();
+        ArrayList<String[]> list = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            String[] notificationArray = new String[2];
+            String notificationTitle = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX);
+            String notificationUri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX);
+            notificationArray[0] = notificationTitle;
+            notificationArray[1] = notificationUri;
+            list.add(notificationArray);
+            Log.d("Notification", notificationTitle);
+            Log.d("Notification URI", notificationUri);
+        }
+        return list;
     }
 
     private void initUI(View rootView) {
@@ -85,9 +179,6 @@ public class HBNotificationFragment extends Fragment {
         notificationModelArrayList = new ArrayList<>();
 
         NotificationModel notificationModel = new NotificationModel();
-        notificationModel.setNotificationItemLabel("Conversation tones");
-        notificationModel.setNotificationSubItemLabel("Play sounds for incoming and outgoing messages");
-        notificationModelArrayList.add(notificationModel);
         notificationModel = new NotificationModel();
         notificationModel.setNotificationItemLabel("Notification tone");
         notificationModel.setNotificationSubItemLabel("Default ringtone");
