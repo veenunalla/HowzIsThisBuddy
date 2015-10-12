@@ -2,6 +2,7 @@ package com.pivotaldesign.howzthisbuddy.fragments;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.database.Cursor;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -15,24 +16,20 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.pivotaldesign.howzthisbuddy.R;
 import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationAdapter;
 import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationRingtoneAdapter;
 import com.pivotaldesign.howzthisbuddy.application.HBApplication;
+import com.pivotaldesign.howzthisbuddy.util.SharedPreferenceHelper;
 
-import java.net.URI;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -47,7 +44,9 @@ public class HBNotificationFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    public static final int NOTIFICATION_TITLE = 0;
+    public static final int NOTIFICATION_URI = 1;
+    public static final int NOTIFICATION_ID = 2;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -57,9 +56,9 @@ public class HBNotificationFragment extends Fragment {
     private String[] selectedRingtone;
     private HBNotificationAdapter notificationAdapter;
     private OnFragmentInteractionListener mListener;
-    public static final int NOTIFICATION_TITLE=0;
-    public static final int NOTIFICATION_URI=1;
-    public static final int NOTIFICATION_ID=2;
+    private int ringtonePosition;
+    private boolean ringtoneSelected;
+
      /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -156,12 +155,29 @@ public class HBNotificationFragment extends Fragment {
         radioButton1.setText(options[1]);
         final RadioButton radioButton2 = (RadioButton)dialog.findViewById(R.id.radioButton_two);
         radioButton2.setText(options[2]);
-
         final RadioButton radioButton3= (RadioButton)dialog.findViewById(R.id.radioButton_three);
         radioButton3.setText(options[3]);
-
         final RadioButton radioButton4 = (RadioButton)dialog.findViewById(R.id.radioButton_four);
         radioButton4.setText(options[4]);
+
+
+        SharedPreferenceHelper defaultValues = new SharedPreferenceHelper();
+        int positionChecked;
+        if (isVibrateAlertView) {
+            positionChecked = defaultValues.getStoreNotificationSoundposition(getActivity().getApplicationContext());
+        } else {
+            positionChecked = defaultValues.getStoreNotificationPopUpposition(getActivity().getApplicationContext());
+        }
+        if (positionChecked == 0) {
+            radioButton1.setChecked(true);
+        } else if (positionChecked == 1) {
+            radioButton2.setChecked(true);
+        } else if (positionChecked == 2) {
+            radioButton3.setChecked(true);
+        } else {
+            radioButton4.setChecked(true);
+        }
+
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
@@ -169,16 +185,16 @@ public class HBNotificationFragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // find which radio button is selected
                 if (checkedId == R.id.radioButton_one) {
-                    saveToSharedPreferenceAndUpdateListView(radioButton1.getText().toString(), isVibrateAlertView);
+                    saveToSharedPreferenceAndUpdateListView(radioButton1.getText().toString(), isVibrateAlertView, 0);
                     dialog.dismiss();
                 } else if (checkedId == R.id.radioButton_two) {
-                    saveToSharedPreferenceAndUpdateListView(radioButton2.getText().toString(), isVibrateAlertView);
+                    saveToSharedPreferenceAndUpdateListView(radioButton2.getText().toString(), isVibrateAlertView, 1);
                     dialog.dismiss();
                 } else if (checkedId == R.id.radioButton_three) {
-                    saveToSharedPreferenceAndUpdateListView(radioButton3.getText().toString(), isVibrateAlertView);
+                    saveToSharedPreferenceAndUpdateListView(radioButton3.getText().toString(), isVibrateAlertView, 2);
                     dialog.dismiss();
                 } else {
-                    saveToSharedPreferenceAndUpdateListView(radioButton4.getText().toString(), isVibrateAlertView);
+                    saveToSharedPreferenceAndUpdateListView(radioButton4.getText().toString(), isVibrateAlertView, 3);
                     dialog.dismiss();
                 }
             }
@@ -206,11 +222,16 @@ public class HBNotificationFragment extends Fragment {
         dialog.show();
     }
 
-    private void saveToSharedPreferenceAndUpdateListView(String message,boolean isVibrateAlertView) {
-        if (isVibrateAlertView){
+    private void saveToSharedPreferenceAndUpdateListView(String message, boolean isVibrateAlertView, int position) {
+        SharedPreferenceHelper saveToSharePref = new SharedPreferenceHelper();
+        if (isVibrateAlertView) {
             notificationModelArrayList.get(1).setNotificationSubItemLabel(message);
-        }else {
+            saveToSharePref.storeNotificationSoundposition(getActivity().getApplicationContext(), position);
+            saveToSharePref.storeNotificationSound(getActivity().getApplicationContext(), message);
+        } else {
             notificationModelArrayList.get(2).setNotificationSubItemLabel(message);
+            saveToSharePref.storeNotificationPopUpposition(getActivity().getApplicationContext(), position);
+            saveToSharePref.storeNotificationPopUp(getActivity().getApplicationContext(), message);
         }
         notificationAdapter = new HBNotificationAdapter(getActivity().getApplicationContext(), notificationModelArrayList);
         notificationListView.setAdapter(notificationAdapter);
@@ -230,8 +251,9 @@ public class HBNotificationFragment extends Fragment {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.layout_notification_ringtone_view);
         // set the custom dialog components - text, image and button
+        selectedRingtone = null;
         ListView tonesListView = (ListView) dialog.findViewById(R.id.listview_notification_tones_list);
-        HBNotificationRingtoneAdapter adapter = new HBNotificationRingtoneAdapter(getActivity().getApplicationContext(), notificationNamesList);
+        final HBNotificationRingtoneAdapter adapter = new HBNotificationRingtoneAdapter(getActivity().getApplicationContext(), notificationNamesList);
         tonesListView.setAdapter(adapter);
 
         Button okButton = (Button) dialog.findViewById(R.id.notification_tones_ok_button);
@@ -262,12 +284,14 @@ public class HBNotificationFragment extends Fragment {
                 dialog.dismiss();
             }
         });
+        final SharedPreferenceHelper defaultPref = new SharedPreferenceHelper();
 
         tonesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 try {
-
+                    ringtonePosition = position;
+                    adapter.setSelectedIndex(position);
                     String[] notificationRingtone = getListOfRingTones.get(position);
                     Uri notificationRingtoneURI = Uri.parse(notificationRingtone[NOTIFICATION_URI] + "/" + notificationRingtone[NOTIFICATION_ID]);
                     if (ringtone != null) {
@@ -279,6 +303,7 @@ public class HBNotificationFragment extends Fragment {
                             getRingtone(getActivity().getApplicationContext(), notificationRingtoneURI);
                     ringtone.play();
                     selectedRingtone = notificationRingtone;
+                    defaultPref.storeNotificationRingtoneURI(getActivity().getApplicationContext(), notificationRingtone[NOTIFICATION_URI] + "/" + notificationRingtone[NOTIFICATION_ID]);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -286,11 +311,18 @@ public class HBNotificationFragment extends Fragment {
         });
         String[] notificationRingtone = getListOfRingTones.get(0);
         selectedRingtone = notificationRingtone;
+        int selectedRingtonePosition = defaultPref.getStoreNotificationRingToneposition(getActivity().getApplicationContext());
+        adapter.setSelectedIndex(selectedRingtonePosition);
         dialog.show();
     }
 
     private void storeTheRingtoneInSharedPreferenceAndUpdateListView() {
-        notificationModelArrayList.get(0).setNotificationSubItemLabel("Default ringtone"+"("+selectedRingtone[NOTIFICATION_TITLE]+")");
+        SharedPreferenceHelper defaultPref = new SharedPreferenceHelper();
+        if (selectedRingtone != null) {
+            defaultPref.storeNotificationRingToneposition(getActivity().getApplicationContext(), ringtonePosition);
+            defaultPref.storeNotificationRingTone(getActivity().getApplicationContext(), "Default ringtone " + "(" + selectedRingtone[NOTIFICATION_TITLE] + ")");
+        }
+        notificationModelArrayList.get(0).setNotificationSubItemLabel(defaultPref.getStoreNotificationRingTone(getActivity().getApplicationContext()));
         notificationAdapter = new HBNotificationAdapter(getActivity().getApplicationContext(), notificationModelArrayList);
         notificationListView.setAdapter(notificationAdapter);
         notificationAdapter.notifyDataSetChanged();
@@ -321,19 +353,20 @@ public class HBNotificationFragment extends Fragment {
     private void initUI(View rootView) {
         notificationListView = (ListView) rootView.findViewById(R.id.listview_notification);
         notificationModelArrayList = new ArrayList<>();
-
+        SharedPreferenceHelper defaultSharPref = new SharedPreferenceHelper();
+        Context context = getActivity().getApplicationContext();
         NotificationModel notificationModel = new NotificationModel();
         notificationModel = new NotificationModel();
         notificationModel.setNotificationItemLabel("Notification tone");
-        notificationModel.setNotificationSubItemLabel("Default ringtone");
+        notificationModel.setNotificationSubItemLabel(defaultSharPref.getStoreNotificationRingTone(context));
         notificationModelArrayList.add(notificationModel);
         notificationModel = new NotificationModel();
         notificationModel.setNotificationItemLabel("Vibrate");
-        notificationModel.setNotificationSubItemLabel("Default");
+        notificationModel.setNotificationSubItemLabel(defaultSharPref.getStoreNotificationSound(context));
         notificationModelArrayList.add(notificationModel);
         notificationModel = new NotificationModel();
         notificationModel.setNotificationItemLabel("Popup notification");
-        notificationModel.setNotificationSubItemLabel("Always show popup");
+        notificationModel.setNotificationSubItemLabel(defaultSharPref.getStoreNotificationPopUp(context));
         notificationModelArrayList.add(notificationModel);
     }
 

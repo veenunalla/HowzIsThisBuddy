@@ -16,10 +16,12 @@
         android:textColor="@android:color/black"
         android:id="@+id/notification_ringtone_item" />
 
-    <RadioButton
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_weight="4" />
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:layout_gravity="center"
+        android:id="@+id/notification_ringtone_radiobutton"
+        android:src="@drawable/unselected_radiobutton" />
 
 </LinearLayout>

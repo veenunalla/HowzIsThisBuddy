@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.pivotaldesign.howzthisbuddy.R;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 public class HBNotificationRingtoneAdapter extends BaseAdapter {
     private Context mContext;
     private ArrayList<String> notificationRingtoneList;
+    private int selectedPosition;
 
     public HBNotificationRingtoneAdapter(Context context, ArrayList<String> ringtonesList) {
         this.mContext = context;
@@ -45,8 +47,22 @@ public class HBNotificationRingtoneAdapter extends BaseAdapter {
             LayoutInflater mInflater = (LayoutInflater) mContext.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             view = mInflater.inflate(R.layout.layout_notification_ringtone_item, null);
         }
+        if (selectedPosition == position) {
+            ImageView radioButtonImage = (ImageView) view.findViewById(R.id.notification_ringtone_radiobutton);
+            radioButtonImage.setImageResource(mContext.getResources().getIdentifier("selected_radio_button", "drawable", mContext.getPackageName()));
+        } else {
+            ImageView radioButtonImage = (ImageView) view.findViewById(R.id.notification_ringtone_radiobutton);
+            radioButtonImage.setImageResource(mContext.getResources().getIdentifier("unselected_radiobutton", "drawable", mContext.getPackageName()));
+        }
         TextView notificationRingtoneText = (TextView) view.findViewById(R.id.notification_ringtone_item);
         notificationRingtoneText.setText(notificationRingtoneList.get(position));
         return view;
     }
+
+
+    public void setSelectedIndex(int position) {
+        selectedPosition = position;
+        notifyDataSetChanged();
+    }
+
 }
