@@ -17,11 +17,15 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.pivotaldesign.howzthisbuddy.R;
 import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationAdapter;
 import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationRingtoneAdapter;
@@ -58,6 +62,7 @@ public class HBNotificationFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     private int ringtonePosition;
     private boolean ringtoneSelected;
+    private CheckBox conversationCheckBox;
 
      /**
      * Use this factory method to create a new instance of
@@ -291,6 +296,7 @@ public class HBNotificationFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 try {
                     ringtonePosition = position;
+                    ringtoneSelected = true;
                     adapter.setSelectedIndex(position);
                     String[] notificationRingtone = getListOfRingTones.get(position);
                     Uri notificationRingtoneURI = Uri.parse(notificationRingtone[NOTIFICATION_URI] + "/" + notificationRingtone[NOTIFICATION_ID]);
@@ -309,6 +315,7 @@ public class HBNotificationFragment extends Fragment {
                 }
             }
         });
+        ringtoneSelected = false;
         String[] notificationRingtone = getListOfRingTones.get(0);
         selectedRingtone = notificationRingtone;
         int selectedRingtonePosition = defaultPref.getStoreNotificationRingToneposition(getActivity().getApplicationContext());
@@ -318,10 +325,11 @@ public class HBNotificationFragment extends Fragment {
 
     private void storeTheRingtoneInSharedPreferenceAndUpdateListView() {
         SharedPreferenceHelper defaultPref = new SharedPreferenceHelper();
-        if (selectedRingtone != null) {
+        if (ringtoneSelected) {
             defaultPref.storeNotificationRingToneposition(getActivity().getApplicationContext(), ringtonePosition);
             defaultPref.storeNotificationRingTone(getActivity().getApplicationContext(), "Default ringtone " + "(" + selectedRingtone[NOTIFICATION_TITLE] + ")");
         }
+        String itemName = defaultPref.getStoreNotificationRingTone(getActivity().getApplicationContext());
         notificationModelArrayList.get(0).setNotificationSubItemLabel(defaultPref.getStoreNotificationRingTone(getActivity().getApplicationContext()));
         notificationAdapter = new HBNotificationAdapter(getActivity().getApplicationContext(), notificationModelArrayList);
         notificationListView.setAdapter(notificationAdapter);
@@ -368,6 +376,15 @@ public class HBNotificationFragment extends Fragment {
         notificationModel.setNotificationItemLabel("Popup notification");
         notificationModel.setNotificationSubItemLabel(defaultSharPref.getStoreNotificationPopUp(context));
         notificationModelArrayList.add(notificationModel);
+
+        conversationCheckBox = (CheckBox)rootView.findViewById(R.id.checkbox_conversation);
+        conversationCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                SharedPreferenceHelper storePref = new SharedPreferenceHelper();
+                storePref.storeConversationTones(getActivity().getApplicationContext(),isChecked);
+            }
+        });
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -7,6 +7,10 @@ import android.preference.PreferenceManager;
  * Created by VenuNalla on 10/12/15.
  */
 public class SharedPreferenceHelper {
+
+    public static String NOTIFICATION_CONVERSATION = "notification_conversation";
+
+
     public static String NOTIFICATION_RINGTONE = "notification_ringtone";
     public static String NOTIFICATION_RINGTONE_POSITION = "notification_ringtone_position";
     public static String NOTIFICATION_RINGTONE_URI = "notification_ringtone_uri";
@@ -15,6 +19,7 @@ public class SharedPreferenceHelper {
     public static String NOTIFICATION_SOUND_MODE_POSITION = "notification_vibrate_position";
     public static String NOTIFICATION_POPUP_MODE = "notification_popup";
     public static String NOTIFICATION_POPUP_MODE_POSITION = "notification_popup_position";
+
 
 
     public SharedPreferenceHelper() {
@@ -28,6 +33,14 @@ public class SharedPreferenceHelper {
 
     public String getStoreNotificationRingtoneURI(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context).getString(NOTIFICATION_RINGTONE_URI, "Default ringtone");
+    }
+
+    public void storeConversationTones(Context context,boolean isChecked){
+        PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(NOTIFICATION_CONVERSATION, isChecked).commit();
+    }
+
+    public boolean getStoredConversationTones(Context context){
+        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(NOTIFICATION_CONVERSATION, false);
     }
 
     public void storeNotificationRingToneposition(Context context, int position) {
@@ -85,5 +98,4 @@ public class SharedPreferenceHelper {
     public String getStoreNotificationPopUp(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context).getString(NOTIFICATION_POPUP_MODE, "Always show popup");
     }
-
 }
