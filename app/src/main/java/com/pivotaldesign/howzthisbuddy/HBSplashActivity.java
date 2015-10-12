@@ -351,8 +351,6 @@ else{
 			
 			Toast.makeText(getApplicationContext(), "Contacts updated", Toast.LENGTH_SHORT).show();
 
-			//tv.setText(sb.toString());
-
 		}
 	};
 

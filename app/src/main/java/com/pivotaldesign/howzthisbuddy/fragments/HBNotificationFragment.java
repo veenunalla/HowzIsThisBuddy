@@ -32,6 +32,7 @@ import com.pivotaldesign.howzthisbuddy.adapter.HBNotificationRingtoneAdapter;
 import com.pivotaldesign.howzthisbuddy.application.HBApplication;
 import com.pivotaldesign.howzthisbuddy.util.SharedPreferenceHelper;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -341,13 +342,20 @@ public class HBNotificationFragment extends Fragment {
         RingtoneManager manager = new RingtoneManager(getActivity().getApplicationContext());
         manager.setType(RingtoneManager.TYPE_RINGTONE);
         Cursor cursor = manager.getCursor();
+        boolean isFirst = true;
         ArrayList<String[]> list = new ArrayList<>();
         while (cursor.moveToNext()) {
             String[] notificationArray = new String[3];
             String id = cursor.getString(RingtoneManager.ID_COLUMN_INDEX);
             String notificationTitle = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX);
             String notificationUri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX);
-
+            if (isFirst){
+                SharedPreferenceHelper sharedPreferenceHelper = new SharedPreferenceHelper();
+                if (sharedPreferenceHelper.getStoreNotificationRingtoneURI(getActivity().getApplicationContext()).equals("Default ringtone")){
+                    sharedPreferenceHelper.storeNotificationRingtoneURI(getActivity().getApplicationContext(),notificationUri+"/"+id);
+                }
+                isFirst = false;
+            }
             notificationArray[NOTIFICATION_TITLE] = notificationTitle;
             notificationArray[NOTIFICATION_URI] = notificationUri;
             notificationArray[NOTIFICATION_ID] = id;
@@ -382,7 +390,7 @@ public class HBNotificationFragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 SharedPreferenceHelper storePref = new SharedPreferenceHelper();
-                storePref.storeConversationTones(getActivity().getApplicationContext(),isChecked);
+                storePref.storeConversationTones(getActivity().getApplicationContext(), isChecked);
             }
         });
     }
