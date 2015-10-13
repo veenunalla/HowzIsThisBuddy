@@ -19,6 +19,7 @@ import android.view.Display;
 import android.widget.Toast;
 
 import com.google.android.gcm.GCMBaseIntentService;
+import com.pivotaldesign.howzthisbuddy.Controllers.PopupViewActivity;
 import com.pivotaldesign.howzthisbuddy.R;
 import com.pivotaldesign.howzthisbuddy.util.SharedPreferenceHelper;
 
@@ -29,11 +30,11 @@ public class GCMIntentService extends GCMBaseIntentService {
 	private  final int VIBRATE_OFF = 0;
 	private  final int VIBRATE_DEFAULT = 1;
 	private  final int VIBRATE_SHORT = 2;
-	private  final int VIBRATE_LONG = 3;
+//	private  final int VIBRATE_LONG = 3;
 	private  final int POPUP_OFF = 0;
 	private  final int POPUP_ON_WHEN_SCREEN_ON = 1;
 	private  final int POPUP_ON_WHEN_SCREEN_OFF = 2;
-	private  final int POPUP_ALWAYS_SHOW = 3;
+//	private  final int POPUP_ALWAYS_SHOW = 3;
 
 
 	// Use your PROJECT ID from Google API into SENDER_ID
@@ -87,14 +88,14 @@ public class GCMIntentService extends GCMBaseIntentService {
 		}
 		noVibrate = false;
 		vibrateMode = new long[0];
-		if (vibrateType == 0){
+		if (vibrateType == VIBRATE_OFF){
 			noVibrate = true;
 		}
-		else if (vibrateType == 1){
+		else if (vibrateType == VIBRATE_DEFAULT){
 			vibrateMode = vibrateDefault;
 			// Create the notification with a notification builder
 
-		}else if (vibrateType == 2){
+		}else if (vibrateType == VIBRATE_SHORT){
 			vibrateMode = vibrateShort;
 			// Create the notification with a notification builder
 
@@ -104,15 +105,22 @@ public class GCMIntentService extends GCMBaseIntentService {
 		}
 		if (popUpType == POPUP_OFF){
 
+
 		}else if (popUpType == POPUP_ON_WHEN_SCREEN_ON){
 			if (!screenLocked){
-				showNotification(data, context);
+				Intent intent = new Intent(context, PopupViewActivity.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				this.getApplicationContext().startActivity(intent);
+//				showNotification(data, context);
 			}
 		}else if (popUpType == POPUP_ON_WHEN_SCREEN_OFF){
 			if (screenLocked){
 				showNotification(data, context);
 			}
 		}else {
+			Intent intent = new Intent(context, PopupViewActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			this.getApplicationContext().startActivity(intent);
 			showNotification(data,context);
 		}
 	}

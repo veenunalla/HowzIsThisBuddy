@@ -192,20 +192,19 @@ public class HBNotificationFragment extends Fragment {
                 // find which radio button is selected
                 if (checkedId == R.id.radioButton_one) {
                     saveToSharedPreferenceAndUpdateListView(radioButton1.getText().toString(), isVibrateAlertView, 0);
-                    dialog.dismiss();
                 } else if (checkedId == R.id.radioButton_two) {
                     saveToSharedPreferenceAndUpdateListView(radioButton2.getText().toString(), isVibrateAlertView, 1);
-                    dialog.dismiss();
                 } else if (checkedId == R.id.radioButton_three) {
                     saveToSharedPreferenceAndUpdateListView(radioButton3.getText().toString(), isVibrateAlertView, 2);
-                    dialog.dismiss();
                 } else {
                     saveToSharedPreferenceAndUpdateListView(radioButton4.getText().toString(), isVibrateAlertView, 3);
-                    dialog.dismiss();
                 }
+                dialog.dismiss();
+
             }
 
         });
+
 
 
         Button cancelButton = (Button) dialog.findViewById(R.id.radioButton_canncel);

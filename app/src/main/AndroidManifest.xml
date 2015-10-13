@@ -19,6 +19,7 @@
     <permission
         android:name="com.pivotaldesign.howzthisbuddy.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
@@ -95,6 +96,10 @@
         <activity
             android:name=".HBNotificationActivity"
             android:label="@string/title_activity_hbnotification" >
+        </activity>
+        <activity
+            android:name=".Controllers.PopupViewActivity"
+            android:theme="@android:style/Theme.Dialog">
         </activity>
     </application>
 
