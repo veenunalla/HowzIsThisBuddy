@@ -26,21 +26,21 @@
 
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/str_opinion_response_describe_hint"
-        android:lines="3"
-        android:minLines="3"
-        android:scrollbars="vertical"
-        android:inputType="textMultiLine"
-        android:singleLine="false"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
-        android:layout_below="@+id/img_opinion_response_like"
-        android:layout_alignLeft="@+id/img_opinion_response_like"
-        android:layout_alignStart="@+id/img_opinion_response_like" />
+    <!--<EditText-->
+        <!--android:id="@+id/editText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="@string/str_opinion_response_describe_hint"-->
+        <!--android:lines="3"-->
+        <!--android:minLines="3"-->
+        <!--android:scrollbars="vertical"-->
+        <!--android:inputType="textMultiLine"-->
+        <!--android:singleLine="false"-->
+        <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"-->
+        <!--android:layout_below="@+id/img_opinion_response_like"-->
+        <!--android:layout_alignLeft="@+id/img_opinion_response_like"-->
+        <!--android:layout_alignStart="@+id/img_opinion_response_like" />-->
 
     <TextView
         android:id="@+id/textView2"
@@ -51,9 +51,9 @@
         android:padding="5dp"
         android:text="@string/str_opinion_response_send_your_opinion"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_below="@+id/img_opinion_response_like"
+        android:layout_alignLeft="@+id/relativeLayout"
+        android:layout_alignStart="@+id/relativeLayout" />
 
     <ImageButton
         android:id="@+id/img_opinion_response_like"

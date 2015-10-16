@@ -127,20 +127,10 @@ public class HBNotificationFragment extends Fragment {
             ArrayList<String[]> getListOfRingTones = getAllNotificationsRingtonesList();
             showDialogForListOfNotificationRingTones(getListOfRingTones);
         } else if (position == 2) {
-            String[] vibrateOptions = new String[5];
-            vibrateOptions[0] = "Vibrate";
-            vibrateOptions[1] = "Off";
-            vibrateOptions[2] = "Default";
-            vibrateOptions[3] = "Short";
-            vibrateOptions[4] = "Long";
+            String[] vibrateOptions = getResources().getStringArray(R.array.vibrate_items);
             showDialogwithRadioButtons(R.layout.layout_notification_alertdialog_radiobuttons, vibrateOptions ,true);
         } else {
-            String[] popUpNotificationOptions = new String[5];
-            popUpNotificationOptions[0] = "Popup notification";
-            popUpNotificationOptions[1] = "No Popup";
-            popUpNotificationOptions[2] = "Only when screen \"On\" ";
-            popUpNotificationOptions[3] = "Only when screen \"Off\" ";
-            popUpNotificationOptions[4] = "Always show popup";
+            String[] popUpNotificationOptions = getResources().getStringArray(R.array.popup_items);
             showDialogwithRadioButtons(R.layout.layout_notification_alertdialog_radiobuttons, popUpNotificationOptions ,false);
         }
 

@@ -104,25 +104,34 @@ public class GCMIntentService extends GCMBaseIntentService {
 			// Create the notification with a notification builder
 		}
 		if (popUpType == POPUP_OFF){
-
-
+			showNotification(data, context);
 		}else if (popUpType == POPUP_ON_WHEN_SCREEN_ON){
-			if (!screenLocked){
-				Intent intent = new Intent(context, PopupViewActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				this.getApplicationContext().startActivity(intent);
-//				showNotification(data, context);
+			if (screenLocked){
+				showNotification(data, context);
+				showPopup(context);
+			}
+			else {
+				showPopup(context);
 			}
 		}else if (popUpType == POPUP_ON_WHEN_SCREEN_OFF){
 			if (screenLocked){
 				showNotification(data, context);
+				showPopup(context);
+			}else {
+				showNotification(data, context);
 			}
 		}else {
-			Intent intent = new Intent(context, PopupViewActivity.class);
-			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			this.getApplicationContext().startActivity(intent);
-			showNotification(data,context);
+			if (screenLocked) {
+				showNotification(data,context);
+			}
+			showPopup(context);
 		}
+	}
+
+	private void showPopup(Context context){
+		Intent intent = new Intent(context, PopupViewActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		this.getApplicationContext().startActivity(intent);
 	}
 
 	private void showNotification(Intent data, Context context){
